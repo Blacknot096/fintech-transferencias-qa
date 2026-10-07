@@ -1,0 +1,5 @@
+node_modules/
+coverage/
+
+# La documentación se entrega por Drive, no por el repositorio
+documentacion/
