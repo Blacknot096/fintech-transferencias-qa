@@ -27,7 +27,6 @@ module.exports = [
       // Estilo y mantenibilidad
       'no-var': 'error',
       'prefer-const': 'error',
-      curly: ['error', 'all'],
       complexity: ['error', 10],
       'max-depth': ['error', 3],
       'max-params': ['error', 4],
@@ -51,6 +50,9 @@ module.exports = [
     },
   },
 
-  // Debe ir al final: desactiva las reglas de formato que resuelve Prettier
+  // Desactiva las reglas de formato que resuelve Prettier
   prettier,
+
+  // Va después de Prettier porque su configuración apaga esta regla
+  { rules: { curly: ['error', 'all'] } },
 ];

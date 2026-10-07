@@ -28,7 +28,9 @@ describe('calcularComision', () => {
   });
 
   test('rechaza un tipo de destino desconocido', () => {
-    expect(() => calcularComision(10_000, 'CRIPTO')).toThrow('Tipo de destino no soportado: CRIPTO');
+    expect(() => calcularComision(10_000, 'CRIPTO')).toThrow(
+      'Tipo de destino no soportado: CRIPTO',
+    );
   });
 
   test.each([0, -100, 10.5, Number.NaN, '100'])('rechaza el monto inválido %p', (monto) => {
